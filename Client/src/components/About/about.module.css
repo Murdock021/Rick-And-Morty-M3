@@ -1,0 +1,111 @@
+.todo {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.all {
+  background: rgba(127, 72, 182, 0.2);
+  width: fit-content;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px black solid;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+.saludo {
+  color: blanchedalmond;
+  transition: 0.2s ease-in-out;
+  margin: 20px;
+}
+
+.saludo:hover {
+  color: rgb(179, 50, 93);
+  font-size: 45px;
+}
+
+.nombre {
+  color: blanchedalmond;
+  transition: 0.4s ease-in-out;
+  margin: 15px;
+}
+
+.nombre:hover {
+  color: #44dbd5;
+  font-size: 40px;
+}
+
+.texto {
+  color: blanchedalmond;
+  transition: 0.4s ease-in-out;
+  margin: 10px;
+}
+
+.texto:hover {
+  color: orangered;
+  font-size: 25px;
+}
+
+/* *************** */
+.container {
+  height: 400px;
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  perspective: 500px;
+}
+
+.logo {
+  width: 300px;
+  height: 230px;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 20px;
+  filter: drop-shadow(0px 7px 21px rgba(127, 72, 182));
+  animation: rotar 5s linear infinite;
+}
+
+@keyframes rotar {
+  from {
+    transform: rotateY(180deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.bottom {
+  width: 20rem;
+  height: 20rem;
+  position: absolute;
+  bottom: -94px;
+  background: rgba(5, 1, 8, 0.3);
+  border-radius: 50%;
+  box-shadow: inset 0px 0px 10px 10px #11111136;
+  transform: rotateX(90deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom::before {
+  content: "";
+  width: 16rem;
+  height: 16rem;
+  position: absolute;
+  bottom: 5rem;
+  background: rgba(127, 72, 182);
+  border-radius: 50%;
+  box-shadow: inset 0px 0px 10px 10px #11111136;
+  filter: blur(30px);
+}
